@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>محمدامین | Personal Space</title>
+<style>
+:root{--bg:#070914;--card:#101528cc;--text:#eef2ff;--muted:#9aa6c0;--a:#7c6cff;--b:#52d9ff;--line:#ffffff14}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 15% 15%,#6b5cff25,transparent 27%),radial-gradient(circle at 85% 65%,#00c8ff18,transparent 25%)}
+#stars{position:fixed;inset:0;z-index:25;opacity:.5;pointer-events:none}.star{position:absolute;pointer-events:auto;cursor:pointer;width:2px;height:2px;background:#fff;border-radius:50%;animation:tw 3s infinite alternate}@keyframes tw{to{opacity:.15;transform:scale(1.8)}}
+nav{position:fixed;z-index:20;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 24px));padding:11px 15px;border:1px solid var(--line);border-radius:20px;background:#0b1020bb;backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:20px}.logo b{color:var(--a)}nav a{color:#aeb8d0;text-decoration:none;margin-right:18px;font-size:13px}nav a:hover{color:#fff}
+#top{min-height:100vh;width:min(1120px,calc(100% - 30px));margin:auto;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px;padding-top:65px}.eyebrow{color:#9187ff;font-size:13px;font-weight:bold;letter-spacing:1px}.hero h1{font-size:clamp(45px,7vw,82px);line-height:1.05;margin:15px 0}.grad{background:linear-gradient(90deg,#fff,#8e82ff,#5adfff);-webkit-background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;max-width:680px}.buttons{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}.btn{padding:11px 18px;border-radius:13px;text-decoration:none;font-weight:bold;cursor:pointer;border:1px solid var(--line);display:inline-block}.primary{background:linear-gradient(135deg,var(--a),#349eff);color:#fff}.ghost{background:#ffffff07;color:#dce4f7}
+.scene{height:390px;display:grid;place-items:center;perspective:900px}.cube{width:190px;height:190px;position:relative;transform-style:preserve-3d;animation:spin 16s linear infinite}.face{position:absolute;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;cursor:pointer;-webkit-touch-callout:none;inset:0;border:1px solid #a69dff55;background:#776dff0c;box-shadow:inset 0 0 40px #6d63ff16;display:grid;place-items:center;font-size:48px;backdrop-filter:blur(4px)}.f1{transform:translateZ(95px)}.f2{transform:rotateY(90deg) translateZ(95px)}.f3{transform:rotateY(180deg) translateZ(95px)}.f4{transform:rotateY(-90deg) translateZ(95px)}.f5{transform:rotateX(90deg) translateZ(95px)}.f6{transform:rotateX(-90deg) translateZ(95px)}@keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
+section{width:min(1120px,calc(100% - 30px));margin:auto;padding:90px 0}.title{font-size:32px;margin:0}.sub{color:var(--muted);margin:4px 0 25px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:0 18px 50px #0005;transition:.25s}.card:hover{transform:translateY(-7px);border-color:#8277ff55}.icon{font-size:29px}.card p{color:#8e99b2}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:8px 13px;border:1px solid var(--line);background:#ffffff06;border-radius:999px;color:#ccd5e9}
+.progress{height:8px;background:#ffffff0d;border-radius:20px;overflow:hidden;margin:10px 0 20px}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b));border-radius:20px}
+.blog{display:grid;grid-template-columns:1fr 1fr;gap:16px}.post{min-height:150px}.post small{color:#7f8aa5}.quote{border-right:3px solid var(--a);background:#ffffff06;padding:28px;border-radius:18px;color:#ccd5e8;font-size:19px}
+.map{height:330px;border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;background:radial-gradient(circle at 45% 45%,#38416b55,transparent 20%),linear-gradient(135deg,#0d1324,#111c32)}.map:before{content:"";position:absolute;inset:0;opacity:.3;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:38px 38px}.pin{position:absolute;left:55%;top:45%;width:18px;height:18px;border-radius:50%;background:#61dcff;box-shadow:0 0 0 9px #61dcff18,0 0 30px #61dcff}.map label{position:absolute;top:18px;right:18px;color:#9eabc4;background:#070914bb;padding:8px 12px;border-radius:10px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact input,.contact textarea{width:100%;background:#ffffff07;border:1px solid var(--line);border-radius:13px;padding:13px;color:white;margin-bottom:10px;font:inherit}.contact textarea{min-height:140px;resize:vertical}
+footer{padding:45px 20px;text-align:center;border-top:1px solid var(--line);color:#69748e}#theme{position:fixed;bottom:20px;left:20px;z-index:30;border:1px solid var(--line);background:#11172b;color:white;width:45px;height:45px;border-radius:50%;cursor:pointer}
+.light{--bg:#f5f7fc;--card:#ffffffdd;--text:#111827;--muted:#647084;--line:#11182718}.light body:before{opacity:.3}
+#toast{position:fixed;bottom:22px;right:50%;transform:translateX(50%) translateY(80px);background:#151c31;color:white;border:1px solid var(--line);padding:10px 16px;border-radius:12px;transition:.3s;z-index:40}.show{transform:translateX(50%) translateY(0)!important}
+@media(max-width:780px){nav .links{display:none}#top{grid-template-columns:1fr;text-align:center;padding-top:120px}.hero p{margin:auto}.buttons{justify-content:center}.scene{height:290px}.cube{width:140px;height:140px}.f1{transform:translateZ(70px)}.f2{transform:rotateY(90deg) translateZ(70px)}.f3{transform:rotateY(180deg) translateZ(70px)}.f4{transform:rotateY(-90deg) translateZ(70px)}.f5{transform:rotateX(90deg) translateZ(70px)}.f6{transform:rotateX(-90deg) translateZ(70px)}.grid,.blog,.contact{grid-template-columns:1fr}}
+</style>
+
+<style id="secret-effects">
+.face.secret-target{
+  border-color:#b8b0ffcc!important;
+  box-shadow:inset 0 0 42px #7c6cff35,0 0 18px #7c6cff30!important;
+  animation:faceHint 1.5s ease-in-out infinite;
+}
+@keyframes faceHint{
+  0%,100%{filter:brightness(1);transform-origin:center}
+  50%{filter:brightness(1.22);box-shadow:inset 0 0 46px #7c6cff42,0 0 22px #7c6cff38}
+}
+.face.secret-shake{animation:faceShake .28s ease-in-out!important}
+.cube.secret-rotate{animation:spin 16s linear infinite!important;transition:none}
+@keyframes faceShake{
+  0%,100%{translate:0 0}
+  25%{translate:-5px 0}
+  50%{translate:5px 0}
+  75%{translate:-3px 0}
+}
+.secret-audio-on{opacity:1}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<audio id="mainMusic" loop preload="none" src="https://opengameart.org/sites/default/files/sector_0.mp3"></audio>
+<audio id="secretLayer" loop preload="none" src="https://opengameart.org/sites/default/files/pulse_0.mp3"></audio>
+
+<nav><div class="logo">M<b>.</b></div><div class="links"><a href="#about">درباره من</a><a href="#projects">پروژه‌ها</a><a href="#skills">مهارت‌ها</a><a href="#blog">نوشته‌ها</a><a href="#contact">ارتباط</a></div></nav>
+
+<main>
+<section id="top">
+<div class="hero"><div class="eyebrow">PERSONAL SPACE · 2026</div><h1>سلام، من <span class="grad">محمدامین</span> هستم.</h1><p>دانشجوی مهندسی کامپیوتر؛ علاقه‌مند به فناوری، هوش مصنوعی، علم و ساختن ایده‌های تازه.</p><div class="buttons"><a class="btn primary" href="#projects">دیدن پروژه‌ها ↓</a><a class="btn ghost" href="#about">داستان من</a></div></div>
+<div class="scene"><div class="cube"><div class="face f1">M</div><div class="face f2">✦</div><div class="face f3">⌘</div><div class="face f4">∞</div><div class="face f5">AI</div><div class="face f6">+</div></div></div>
+</section>
+
+<section id="about"><h2 class="title">درباره من</h2><p class="sub">جای عکس پروفایل عمداً خالی گذاشته شده تا بعداً خودت اضافه‌اش کنی.</p><div class="quote">«اینجا داستان مسیرت، علایقت و چیزهایی که می‌خواهی بسازی قرار می‌گیرد.»</div></section>
+
+<section id="projects"><h2 class="title">پروژه‌ها</h2><p class="sub">هر کارت می‌تواند بعداً به صفحه اختصاصی خودش وصل شود.</p><div class="grid">
+<div class="card"><div class="icon">🤖</div><h3>AI Lab</h3><p>آزمایش ایده‌های هوش مصنوعی و ابزارهای هوشمند.</p><div class="tags"><span class="tag">AI</span><span class="tag">Python</span></div></div>
+<div class="card"><div class="icon">🌐</div><h3>Web Studio</h3><p>ساخت تجربه‌های وب مدرن، سریع و واکنش‌گرا.</p><div class="tags"><span class="tag">Web</span><span class="tag">UI</span></div></div>
+<div class="card"><div class="icon">🚀</div><h3>Future Ideas</h3><p>ایده‌هایی که هنوز در حال شکل‌گیری‌اند.</p><div class="tags"><span class="tag">Ideas</span><span class="tag">Build</span></div></div>
+</div></section>
+
+<section id="skills"><h2 class="title">مهارت‌ها</h2><p class="sub">درصدها نمونه‌اند و بعداً قابل تنظیم هستند.</p><div class="grid">
+<div class="card"><b>Python</b><div class="progress"><i style="width:82%"></i></div><b>Web</b><div class="progress"><i style="width:75%"></i></div></div>
+<div class="card"><b>Problem Solving</b><div class="progress"><i style="width:88%"></i></div><b>AI</b><div class="progress"><i style="width:68%"></i></div></div>
+<div class="card"><b>Learning</b><div class="progress"><i style="width:94%"></i></div><b>Creativity</b><div class="progress"><i style="width:91%"></i></div></div>
+</div></section>
+
+<section id="blog"><h2 class="title">نوشته‌ها</h2><p class="sub">وبلاگ شخصی برای ایده‌ها، تجربه‌ها و یادداشت‌ها.</p><div class="blog"><article class="card post"><small>یادداشت 01</small><h3>چیزهایی که دارم یاد می‌گیرم</h3><p>اینجا می‌توانی اولین نوشته‌ات را منتشر کنی.</p></article><article class="card post"><small>یادداشت 02</small><h3>ایده‌ای برای آینده</h3><p>یک فضای ساده برای فکرهایی که ارزش ثبت شدن دارند.</p></article></div></section>
+
+<section><h2 class="title">نقشه تعاملی</h2><p class="sub">فعلاً نمایشی است؛ بعداً می‌توانیم نقشه واقعی و مکان‌های موردعلاقه‌ات را اضافه کنیم.</p><div class="map" id="map"><label>MY DIGITAL MAP</label><div class="pin"></div></div></section>
+
+<section id="contact"><h2 class="title">ارتباط</h2><p class="sub">فرم فعلاً نمایشی است؛ بعداً می‌توانیم آن را به ایمیل یا بک‌اند وصل کنیم.</p><div class="contact"><form id="form"><input placeholder="نام"><input placeholder="ایمیل"><textarea placeholder="پیامت..."></textarea><button class="btn primary" type="submit">ارسال پیام</button></form><div class="card"><h3>شبکه‌ها</h3><p class="sub">لینک‌های واقعی خودت را بعداً اینجا قرار بده.</p><div class="tags"><span class="tag">Instagram</span><span class="tag">Telegram</span><span class="tag">LinkedIn</span><span class="tag">GitHub</span></div></div></div></section>
+</main>
+<footer>Made with curiosity ✦ محمدامین</footer>
+<button id="sound" title="موسیقی" style="position:fixed;bottom:20px;left:75px;z-index:30;border:1px solid var(--line);background:#11172b;color:white;width:45px;height:45px;border-radius:50%;cursor:pointer">♫</button><button id="theme" title="تغییر تم">☾</button><div id="toast">پیام شما ثبت شد ✦</div>
+
+
+<script>
+const stars=document.getElementById('stars');
+let specialStarIndex=Math.floor(Math.random()*90);
+
+for(let i=0;i<90;i++){
+  const s=document.createElement('i');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*3+'s';
+
+  if(i===specialStarIndex){
+    s.classList.add('secret-star');
+    s.style.width='5px';
+    s.style.height='5px';
+    s.style.opacity='.95';
+    s.style.boxShadow='0 0 7px #a69dff,0 0 16px #a69dff,0 0 28px #7c6cff';
+    s.style.animation='secretPulse 1.8s ease-in-out infinite';
+    s.title='...';
+  }
+  stars.appendChild(s);
+}
+
+const secretStyle=document.createElement('style');
+secretStyle.textContent=`
+.secret-star{animation:secretPulse 1.8s ease-in-out infinite!important}
+.secret-star:hover{transform:scale(1.45)!important}
+@keyframes secretPulse{
+  0%,100%{opacity:.55;box-shadow:0 0 5px #a69dff,0 0 12px #a69dff}
+  50%{opacity:1;box-shadow:0 0 10px #a69dff,0 0 24px #7c6cff,0 0 36px #52d9ff}
+}`;
+document.head.appendChild(secretStyle);
+
+const toast=document.getElementById('toast');
+const cube=document.querySelector('.cube');
+const faces=[...document.querySelectorAll('.face')];
+
+// Chain: M -> ✦ -> ∞
+const correctFaces=[0,1,3];
+const clues=[
+  'جواب همین الانشم در چرخشه.',
+  'فضا بیشتر از یک بُعد دارد.',
+  'دو نقطه یک جهت می‌سازند.',
+  'سه نقطه، فضا را آشکار می‌کنند.'
+];
+
+let secretStep=-1;
+let secretTimer=null;
+let soundEnabled=false;
+let secretStarted=false;
+
+const mainMusic=document.getElementById('mainMusic');
+const secretLayer=document.getElementById('secretLayer');
+
+function showToast(text,ms=2600){
+  toast.textContent=text;
+  toast.classList.add('show');
+  clearTimeout(showToast.timer);
+  showToast.timer=setTimeout(()=>toast.classList.remove('show'),ms);
+}
+
+function clearFaceHints(){
+  faces.forEach(f=>f.classList.remove('secret-target'));
+}
+
+function hintFace(index){
+  clearFaceHints();
+  if(faces[index]) faces[index].classList.add('secret-target');
+}
+
+function startMainMusic(){
+  if(!soundEnabled) return;
+  mainMusic.volume=.18;
+  mainMusic.play().catch(()=>{});
+}
+
+function startSecretLayer(){
+  if(!soundEnabled) return;
+  secretLayer.volume=0;
+  secretLayer.play().catch(()=>{});
+  let v=0;
+  clearInterval(startSecretLayer.fade);
+  startSecretLayer.fade=setInterval(()=>{
+    v+=.025;
+    secretLayer.volume=Math.min(.16,v);
+    if(v>=.16) clearInterval(startSecretLayer.fade);
+  },100);
+}
+
+function stopSecretLayer(){
+  clearInterval(startSecretLayer.fade);
+  secretLayer.pause();
+  secretLayer.currentTime=0;
+}
+
+function resetSecret(){
+  secretStep=-1;
+  secretStarted=false;
+  clearFaceHints();
+  cube.style.animation='';
+  cube.style.transform='';
+  cube.classList.remove('secret-rotate');
+  stopSecretLayer();
+  clearTimeout(secretTimer);
+}
+
+document.getElementById('sound').onclick=()=>{
+  soundEnabled=!soundEnabled;
+  document.getElementById('sound').textContent=soundEnabled?'♫':'♩';
+  if(soundEnabled){
+    startMainMusic();
+  }else{
+    mainMusic.pause();
+    secretLayer.pause();
+  }
+};
+
+document.getElementById('theme').onclick=()=>{
+  document.documentElement.classList.toggle('light');
+  document.getElementById('theme').textContent=
+    document.documentElement.classList.contains('light')?'☀':'☾';
+};
+
+document.getElementById('form').onsubmit=e=>{
+  e.preventDefault();
+  showToast('پیام شما ثبت شد ✦',2200);
+};
+
+document.getElementById('map').onclick=e=>{
+  if(e.target.id==='map'||e.target.classList.contains('pin')){
+    const r=e.currentTarget.getBoundingClientRect();
+    const p=document.createElement('i');
+    p.className='pin';
+    p.style.left=(e.clientX-r.left-9)+'px';
+    p.style.top=(e.clientY-r.top-9)+'px';
+    e.currentTarget.appendChild(p);
+  }
+};
+
+// Hidden star starts the chain and points the player to the cube.
+document.querySelector('.secret-star').onclick=e=>{
+  e.stopPropagation();
+  secretStarted=true;
+  secretStep=0;
+  showToast(clues[0],2800);
+  hintFace(correctFaces[0]);
+  startSecretLayer();
+  clearTimeout(secretTimer);
+  secretTimer=setTimeout(resetSecret,30000);
+};
+
+// Cube faces are clickable, but never selectable/copyable.
+faces.forEach((face,index)=>{
+  face.addEventListener('dragstart',e=>e.preventDefault());
+  face.addEventListener('selectstart',e=>e.preventDefault());
+
+  face.onclick=e=>{
+    e.preventDefault();
+    e.stopPropagation();
+
+    if(!secretStarted) return;
+
+    const expected=correctFaces[secretStep];
+
+    if(index!==expected){
+      face.classList.remove('secret-shake');
+      void face.offsetWidth;
+      face.classList.add('secret-shake');
+      showToast('نه... این یکی نیست.',1200);
+      return;
+    }
+
+    face.classList.remove('secret-target');
+    secretStep++;
+
+    if(secretStep===1){
+      showToast(clues[1],2600);
+      hintFace(correctFaces[1]);
+    }else if(secretStep===2){
+      showToast(clues[2],2600);
+      hintFace(correctFaces[2]);
+    }else if(secretStep===3){
+      showToast(clues[3],3000);
+      clearFaceHints();
+      cube.classList.add('secret-rotate');
+      setTimeout(()=>{
+        showToast('بعضی فضاها دیده نمی‌شوند.',3000);
+        stopSecretLayer();
+        openSecretSpace();
+      },3100);
+    }
+  };
+});
+
+// Secret Space
+function openSecretSpace(){
+  let modal=document.getElementById('secretModal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='secretModal';
+    modal.className='secret-modal';
+    modal.innerHTML=`
+      <div class="secret-box">
+        <div class="secret-kicker">SECRET SPACE</div>
+        <h2 class="secret-title">بعضی چیزها فقط برای کنجکاوهاست.</h2>
+        <button id="openSecret" class="secret-btn">بازش کن</button>
+        <div id="poem" class="poem" style="display:none">
+          منم بندهٔ اهل بیت نبی<br>
+          ستایندهٔ خاک پای وصی
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const modalStyle=document.createElement('style');
+    modalStyle.textContent=`
+      .secret-modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:#050713cc;backdrop-filter:blur(16px)}
+      .secret-box{width:min(560px,calc(100% - 30px));padding:36px;text-align:center;border:1px solid #ffffff18;border-radius:28px;background:#0d1324ee;box-shadow:0 30px 100px #0009}
+      .secret-kicker{font-size:11px;letter-spacing:4px;color:#8f85ff;margin-bottom:12px}
+      .secret-title{font-size:clamp(22px,4vw,32px);margin:0 0 24px}
+      .secret-btn{padding:11px 22px;border-radius:13px;border:1px solid #ffffff18;background:linear-gradient(135deg,#7c6cff,#349eff);color:#fff;font:inherit;font-weight:bold;cursor:pointer}
+      .poem{margin-top:25px;padding-top:22px;border-top:1px solid #ffffff14;font-size:21px;line-height:2.1;color:#eef2ff}
+    `;
+    document.head.appendChild(modalStyle);
+
+    modal.querySelector('#openSecret').onclick=()=>{
+      modal.querySelector('#poem').style.display='block';
+    };
+    modal.onclick=e=>{
+      if(e.target===modal){
+        modal.remove();
+        resetSecret();
+      }
+    };
+  }
+  modal.style.display='grid';
+}
+</script>
+
+</body></html>
